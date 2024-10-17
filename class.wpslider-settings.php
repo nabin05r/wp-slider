@@ -64,7 +64,7 @@ if( ! class_exists( 'WPSlider_Settings' ) ){
 
         public function wpslider_shortcode_callback(){
             ?>
-                <span><?php esc_html_e("Use this shortcode ['wpslider'] to display the slider in post/page/widget" ,'wpslider')?></span>
+                <span><?php esc_html_e("Use this shortcode [wpslider] to display the slider in post/page/widget" ,'wpslider')?></span>
             <?php
         }
 
