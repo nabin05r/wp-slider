@@ -41,24 +41,26 @@ figure::before {
 .wrapper {
     position: absolute;
     top: 50%;
-    left: 100px;
+    left: 50%;
     transform: translate(-50%, -50%);
     z-index: 3; /* Ensure content is above the overlay and image */
 }
 
-.slider-title h2, .slider-description .subtitle, .slider-description a{
-    color: #f4f4f4;
+.slider-title h2, .slider-description, .subtitle, .slider-description a{
+    color: #cacaca;
     text-align: center;
 }
 .slider-description a{
-    border: 1px solid #fff;
+    border: 1px solid #f4f4f4;
     font-size: 14px;
-    padding: 14px 16px;
+    border-radius: 20px;
+    padding: 14px 22px;
     text-decoration: none;
     transition: 0.3s linear;
 }
 .slider-description a:hover{
-    background: grey;
+    background: black;
+    border: 1px solid transparent;
 }
 .slick-next{
     right: -35px;
