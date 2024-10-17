@@ -1,7 +1,7 @@
 <?php
 if( ! class_exists( 'WPSlider_Shortcode' ) ){
 
-    class WPSlider_Shorcode{
+    class WPSlider_Shortcode{
         
         public function __construct(){
             add_shortcode('wpslider', array( $this, 'add_shortcode') );

@@ -126,7 +126,7 @@ along with WPSlider. If not, see {URI to Plugin License}.
                 return; 
             }
             if( isset( $_GET['settings-updated'] ) ){
-                add_settings_error('wpslider_options', 'wpslider_message', ecs_html__('Saved Successfully', 'wpslider'), 'success' );
+                add_settings_error('wpslider_options', 'wpslider_message', esc_html__('Saved Successfully', 'wpslider'), 'success' );
             }
             settings_errors( 'wpslider_options' );
             require( WPSLIDER_PATH . 'views/settings-page.php' );
