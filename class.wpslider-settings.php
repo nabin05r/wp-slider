@@ -36,13 +36,13 @@ if( ! class_exists( 'WPSlider_Settings' ) ){
                 'wpslider_main_section',
             ); 
 
-            add_settings_field(
-                'wpslider_title',
-                esc_html__('Slider Title', 'wpslider'),
-                array( $this, 'wpslider_title_callback' ),
-                'wpslider_page2',
-                'wpslider_second_section'
-            );
+            // add_settings_field(
+            //     'wpslider_title',
+            //     esc_html__('Slider Title', 'wpslider'),
+            //     array( $this, 'wpslider_title_callback' ),
+            //     'wpslider_page2',
+            //     'wpslider_second_section'
+            // );
 
             add_settings_field(
                 'wpslider_display_bullets',
@@ -67,8 +67,8 @@ if( ! class_exists( 'WPSlider_Settings' ) ){
                 <span><?php esc_html_e("Use this shortcode [wpslider] to display the slider in post/page/widget" ,'wpslider')?></span>
             <?php
         }
-
-        public function wpslider_title_callback(){
+        /**
+         *  public function wpslider_title_callback(){
             ?>
                 <input
                  type="text"
@@ -78,6 +78,8 @@ if( ! class_exists( 'WPSlider_Settings' ) ){
                 >
             <?php
         }
+         */
+       
 
         public function wpslider_display_bullets_callback(){
             ?>
@@ -120,13 +122,13 @@ if( ! class_exists( 'WPSlider_Settings' ) ){
                 // $new_input[$key] = sanitize_text_field( $value );
                 switch($key){
 
-                    case'wpslider_title':
-                        if( empty( $value)){
-                            add_settings_error('wpslider_options', 'wpslider_message', esc_html__('The title field cannot be empty', 'wpslider'), 'warning');
-                            $value = esc_html__('Please type some Text', 'wpslider');
-                        }
-                        $new_input[$key] = sanitize_text_field( $value );
-                        break;
+                    // case'wpslider_title':
+                    //     if( empty( $value)){
+                    //         add_settings_error('wpslider_options', 'wpslider_message', esc_html__('The title field cannot be empty', 'wpslider'), 'warning');
+                    //         $value = esc_html__('Please type some Text', 'wpslider');
+                    //     }
+                    //     $new_input[$key] = sanitize_text_field( $value );
+                    //     break;
     
                     default:
                         $new_input[$key] = sanitize_text_field( $value );

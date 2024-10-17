@@ -1,4 +1,4 @@
-<h3><?php echo ( ! empty($content) ) ? esc_html($content) : esc_html( WPSlider_Settings::$options['wpslider_title'] ) ;?></h3>
+<!-- <h3><?php echo ( ! empty($content) ) ? esc_html($content) : esc_html( WPSlider_Settings::$options['wpslider_title'] ) ;?></h3> -->
 <div class="wpslider alignfull <?php echo (isset( WPSlider_Settings::$options['wpslider_slider_style'] )) ? esc_attr( WPSlider_Settings::$options['wpslider_slider_style']) : 'style-1' ?>">
 <?php
     $args = array(
