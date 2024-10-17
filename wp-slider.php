@@ -53,7 +53,7 @@ along with WPSlider. If not, see {URI to Plugin License}.
             $wpslider_settings = new WPSlider_Settings();
 
             require_once( WPSLIDER_PATH . '/shortcodes/class.wpslider-shortcode.php');
-            $wpslider_shorcode = new WPSlider_Shorcode();
+            $wpslider_shortcode = new WPSlider_Shortcode();
 
             add_action( 'wp_enqueue_scripts', array($this, 'register_scripts') );
 
