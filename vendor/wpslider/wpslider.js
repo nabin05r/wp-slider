@@ -1,8 +1,8 @@
 jQuery(document).ready(function () {
   jQuery(".your-class").slick({
-    // autoplay: true,
+    autoplay: wpslider_object_inject.autoplay === "1",
     infinite: true,
-    speed: 500,
+    speed: 1000,
     fade: true,
     cssEase: "linear",
     adaptiveHeight: true,

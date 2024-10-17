@@ -45,6 +45,14 @@ if( ! class_exists( 'WPSlider_Settings' ) ){
             // );
 
             add_settings_field(
+                'wpslider_display_autoplay',
+                esc_html__('AutoPlay', 'wpslider'),
+                array( $this, 'wpslider_display_autoplay_callback' ),
+                'wpslider_page2',
+                'wpslider_second_section'
+            );
+
+            add_settings_field(
                 'wpslider_display_bullets',
                 esc_html__('Display Bullets', 'wpslider'),
                 array( $this, 'wpslider_display_bullets_callback' ),
@@ -95,6 +103,24 @@ if( ! class_exists( 'WPSlider_Settings' ) ){
                 ?>
                 >
                 <label for="wpslider_display_bullets"><?php esc_html_e('Whether to display bullets or not', 'wpslider');?></label>
+            <?php
+        }
+
+        
+        public function wpslider_display_autoplay_callback(){
+            ?>
+                <input
+                type="checkbox"
+                name="wpslider_options[wpslider_display_autoplay]"
+                id="wpslider_display_autoplay"
+                value= "1"
+                <?php
+                    if( isset( self::$options[ 'wpslider_display_autoplay' ]) ){
+                        checked( 1, self::$options['wpslider_display_autoplay'], true );
+                    }
+                ?>
+                >
+                <label for="wpslider_display_autoplay"><?php esc_html_e('Whether to autoplay slides or not', 'wpslider');?></label>
             <?php
         }
 

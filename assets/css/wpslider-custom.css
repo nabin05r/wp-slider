@@ -48,10 +48,12 @@ figure::before {
 
 .slider-title h2, .slider-description .subtitle, .slider-description a{
     color: #f4f4f4;
+    text-align: center;
 }
 .slider-description a{
     border: 1px solid #fff;
-    padding: 14px 28px;
+    font-size: 14px;
+    padding: 14px 16px;
     text-decoration: none;
     transition: 0.3s linear;
 }
